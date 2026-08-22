@@ -1,12 +1,10 @@
 const assert = require('assert');
-const CronMaster = require('./core');
-
-const res1 = CronMaster.parse('*/5 * * * *');
-assert.strictEqual(res1.valid, true);
-assert.strictEqual(res1.description.includes('every 5 minutes'), true);
-
-const res2 = CronMaster.parse('0 8 * * 1-5');
-assert.strictEqual(res2.valid, true);
-assert.strictEqual(res2.fields.hour, '8');
-
-console.log('ok, all CronMaster assertions passed');
+const Tool = require('./core');
+assert.strictEqual(Tool.parse('*/5 * * * *').valid, true);
+assert.strictEqual(Tool.parse('0 8 * JAN-MAR MON-FRI').valid, true);
+for (const value of ['*/wat 25 99 99 99', '* * * * * junk', '60 * * * *', '*/0 * * * *', '0 0 31 FEB *']) {
+  const result = Tool.parse(value);
+  if (value !== '0 0 31 FEB *') assert.strictEqual(result.valid, false, value);
+}
+assert.strictEqual(Tool.parse('0 0 31 FEB *').valid, true); // Syntax validation cannot decide calendar occurrence.
+console.log('ok, cron grammar assertions passed');

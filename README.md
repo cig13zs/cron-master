@@ -1,4 +1,4 @@
-# Cron Master — Crontab Expression Parser & Translator
+# Cron Master | Crontab Expression Parser & Translator
 
 > Translate and validate crontab expressions into plain human English online. Supports minute, hour, day, month, and day-of-week syntax offline.
 
@@ -10,7 +10,7 @@
 
 ---
 
-## ⚡ Key Features
+## Features
 
 - **100% Client-Side & Offline:** Pure vanilla JavaScript runtime. Zero network uploads, zero telemetry, zero analytics tracking.
 - **Instant Processing:** Zero dependencies or heavy frameworks for ultra-fast, lightweight execution.
@@ -19,13 +19,13 @@
 
 ---
 
-## 📖 How It Works
+## How it works
 
 Enter any standard 5-part cron expression (e.g. */15 9-17 * * 1-5) to view an intuitive English translation of its execution schedule.
 
 ---
 
-## 🛠️ Offline Chrome Extension Installation
+## Install the extension
 
 1. Download or clone this repository:
    ```bash
@@ -38,7 +38,7 @@ Enter any standard 5-part cron expression (e.g. */15 9-17 * * 1-5) to view an in
 
 ---
 
-## 💡 Frequently Asked Questions (FAQ)
+## FAQ
 
 ### Is my data uploaded to any server?
 No. Everything executes locally inside your browser memory or extension sandbox. No telemetry, third-party scripts, or API requests are made.
@@ -53,7 +53,7 @@ const engine = require('./core');
 
 ---
 
-## 📄 License & Author
+## License and support
 
 - **Author:** [jju1s](https://github.com/cig13zs)
 - **License:** [MIT License](LICENSE)
